@@ -1,0 +1,23 @@
+{
+    "foto": "./foto.jpg",
+    "nome": "Luigi",
+    "cognome": "Silvestro",
+    "dataNascita": {
+        "giorno": 18,
+        "mese": 12,
+        "anno": 2005
+    },
+    "cittaNascita": "Milano",
+    "cittaResidenza": "New York",
+    "viaResidenza": "Via Pippo e Paperino 12",
+    "dataEmissione": {
+        "giorno": 24,
+        "mese": 4,
+        "anno": 2020
+    },
+    "dataScadenza": {
+        "giorno": 17,
+        "mese": 5,
+        "anno": 2025
+    }
+}

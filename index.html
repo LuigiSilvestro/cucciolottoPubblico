@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./carta.css">
+    <title>carta d'identita</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="sinistra">
+            <img id="foto" alt="foto" class="foto"><br>
+            <i>Nome e Cognome</i><br>
+            <b id="nome"></b><br>
+        </div>
+        <div class="destra">
+            <i>Data di nascita</i><br>
+            <b id="dataNascita"></b><br>
+            <i>Città di nascita</i><br>
+            <b id="cittaNascita"></b><br>
+            <i>Città di residenza</i><br>
+            <b id="cittaResidenza"></b><br>
+            <i>Via di residenza</i><br>
+            <b id="viaResidenza"></b><br>
+            <i>Data di emissione</i><br>
+            <b id="dataEmissione"></b><br>
+            <i>Data di scadenza</i><br>
+            <b id="dataScadenza"></b>
+        </div>
+    </div>
+
+
+    <script>
+        fetch('./carta.json')
+            .then((response) => response.json())
+            .then((json) => {
+
+                document.getElementById("foto").src = json.foto;
+                document.getElementById("nome").innerHTML = json.nome + " " + json.cognome;
+                document.getElementById("dataNascita").innerHTML = json.dataNascita.giorno + "\\" + json.dataNascita.mese + "\\" + json.dataNascita.anno;
+                document.getElementById("cittaNascita").innerHTML = json.cittaNascita;
+                document.getElementById("cittaResidenza").innerHTML = json.cittaResidenza;
+                document.getElementById("viaResidenza").innerHTML = json.viaResidenza;
+                document.getElementById("dataEmissione").innerHTML = json.dataEmissione.giorno + "\\" + json.dataEmissione.mese + "\\" + json.dataEmissione.anno;
+                document.getElementById("dataScadenza").innerHTML = json.dataScadenza.giorno + "\\" + json.dataScadenza.mese + "\\" + json.dataScadenza.anno;
+            });
+
+
+    </script>
+
+</body>
+
+</html>
